@@ -16,21 +16,23 @@ document.querySelectorAll("[wm-loader]").forEach(link =>{
         $('.loader-wrapper').slideDown('slow', ()=>{
             $('body').addClass('loading');
         });
-        $('body').removeClass('loading');
     }
 })
 
 //SMOOTH SCROLL QUANDO CLICA NO BOTÃO CONTATO
 document.querySelectorAll("[wm-smoothscroll]").forEach(smthscr =>{
     smthscr.onclick = function(){
-        if(smthscr.id == "sobreBtn"){
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(".sobre").offset().top
-            }, 1500);
-        } else if(smthscr.id == "contatoBtn"){
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $("#projetos").offset().top
-            }, 1500);
+        switch(smthscr.id){
+            case 'sobreBtn':
+                $('html,body').animate({
+                    scrollTop: $(".sobre").offset().top
+                }, 2000);
+                break;
+            case 'projBtn':
+                $('html,body').animate({
+                    scrollTop: $("#projetos").offset().top
+                }, 1000);
+                break;
         }
     }
 })
@@ -47,16 +49,19 @@ function delay (URL) {
 
 document.querySelectorAll("[wm-proj]").forEach(proj =>{
     proj.onmouseover = function(){
-        if(proj.id == "eletric"){
+        switch(proj.id){
+            case 'eletric':
             $("body").stop(true).animate({
                 backgroundColor: '#ffc72c',
                 color: "black"
             },'slow');
-        } else if(proj.id == "projeto2"){
+            break;
+        case 'projeto2':
             $("body").stop(true).animate({
                 backgroundColor: "#00A7E1",
                 color: "black"
             },'slow');
+            break;
         }
     }
     proj.onmouseout = function(){
@@ -81,22 +86,16 @@ function parallax(event) {
 }
 
 //FUNÇÃO MOSTRAR SOBRE MIM
-const hidden = document.querySelector(".hidden");
+const sobreMimContainer = document.querySelector(".hidden");
 const sobreDiv = document.querySelector(".sobreDiv");
 sobreDiv.addEventListener("click", show);
 
 function show(){
-    switch (hidden.classList.contains("hidden")) {
+    switch (sobreMimContainer.classList.contains("hidden")) {
         case true:
-                hidden.classList.remove("slide-out-blurred-right","hidden");
-                hidden.classList.add("show","focus-in-expand");
-            break;
-        case false:
-            hidden.classList.remove("focus-in-expand","show");
-            hidden.classList.add("slide-out-blurred-right");
-            setTimeout(() => {
-                hidden.classList.add("hidden");
-              }, "700");
-        break;
+                sobreMimContainer.classList.remove("hidden");
+                sobreMimContainer.classList.add("show","slide-in-blurred-bottom");
+                sobreDiv.classList.add("hidden");
+            break;   
     }
 }

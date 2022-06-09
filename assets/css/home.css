@@ -81,9 +81,14 @@
 }
 
 body{
-  background: #3c31dd; /* fallback for old browsers */
+  background: #3c31dd; 
   color: white;
 }
+
+p{
+  font-weight: lighter;
+}
+
 
 /*TEXTO CUMPRIMENTO*/
 
@@ -120,8 +125,8 @@ body{
 }
 
 .projetoR{
-    font-family: 'Inter', 'sans-serif';
-    text-align:right; 
+  font-family: 'Inter', 'sans-serif';
+  text-align: right; 
 }
 
 .projetoL{
@@ -131,18 +136,22 @@ body{
   margin-bottom: 100px;
 }
 
-p{
-  font-weight: lighter;
-}
-
-.wave-container{
-  position: absolute;
+.img{
   width: 100%;
-  top: 0;
-  height: auto;
-  z-index: -100;
+  height:auto;
+  margin-right: 0;
+  overflow: hidden;
 }
 
+.projetoR img{
+  transition: all 1s linear;
+}
+
+.projetoR img:hover{
+  transform: scale(1.05);
+}
+
+/*CONTAINER SOBRE MIM*/
 .show{
   display: block;
   position: relative;
@@ -189,4 +198,13 @@ p{
 
 .containerTxt h4{
   padding: 90px 20px 20px 20px;
+}
+
+/*WAVE SVG*/
+.wave-container{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: auto;
+  z-index: -100;
 }
