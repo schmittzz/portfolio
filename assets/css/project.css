@@ -1,0 +1,27 @@
+@import url(global.css);
+@import url(animacoes.css);
+@import url(pageloader.css);
+
+body{
+    background-color: #ededed;
+}
+
+.photos{
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+.heroL{
+    word-wrap: break-word;
+    
+}
+
+

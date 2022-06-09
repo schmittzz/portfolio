@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <title>LEONIC</title>
+</head>
+<body class="loading">
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <main class="conteudo">
+        <div class="container header" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true">
+            <div  class="row">
+                <div class="col-xs-4 col-md-8 text-md-left">
+                    LEONIC
+                </div>
+                
+                <div wm-smoothscroll class="col-xs-4 col-md-2 text-md-right" id="contatoBtn">
+                    PROJETOS
+                </div>
+
+                <div wm-smoothscroll class="col-xs-4 col-md-2 text-md-right" id="sobreBtn">
+                     SOBRE
+                </div>
+            </div>
+        </div>
+
+        <!--TEXTO OLÁ-->
+        <div class="container ola-container mouse" value="3">
+            <div class="row">
+                <div class="col-xs-12 col-md-12 focus-in-expand">
+                    <h1>Olá!</h1>
+                </div>
+                <div class="col-xs-12 col-md-12 focus-in-expand">
+                    <h1>Me chamo</h1>
+                </div>
+                <div class="col-xs-12 col-md-12 focus-in-expand">
+                    <h1 class="text-focus-in title">Leonardo!</h1>
+                </div>
+            </div>
+        </div>
+                
+        <!--PROJETOS-->
+        <section id="projetos">
+            
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 projetoR" 
+                    data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
+                        <h2>PROJETOS</h2>
+                        <a wm-loader href="javascript:delay('eletricproject.html')">
+                            <img wm-proj class="img-fluid" id="eletric" 
+                            src="assets/eletric_home.PNG">
+                        </a>
+                        <h3>Eletric Monkey</h3> <br>
+                        <p>PHP + MySql + JQuery + Javascript</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 projetoL" 
+                    data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
+                        <h3 wm-proj id="projeto2">Em breve</h3>
+                        <p>Mais projetos estão por vir!</p> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--SEÇÃO SOBRE-->
+        <div class="container-fluid sobre">
+            <div class="row" 
+            data-aos="fade-up" data-aos-once="true">
+                <div class="col-md-6 sobreDiv">
+                    <h2>SOBRE MIM</h2>
+                    <p><i>clique em mim!</i></p>
+                </div>
+                <div class="col-xs-12 col-md-6 mt-5 hidden">
+                    <div class="img_pod">
+                        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFxsZuqIqaEfA/profile-displayphoto-shrink_800_800/0/1649571682602?e=1658966400&v=beta&t=kLptBuvjqsg-WCdN981WBRCU8W-K1MggFj6J1il626I" alt="random image">
+                      </div>
+                      <div class="containerTxt">
+                        <h4>Meu nome é Leonardo Nicola, tenho 18 anos e desde que entrei no mundo da
+                            programação, sinto que o front-end era a área que mais me chamava a atenção.<br><br>
+                            Tenho conhecimentos em Javascript, JQuery, HTML, CSS, Bootstrap, Git e Figma.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--REDES SOCIAIS-->
+        <div class="hstack gap-3 mt-5">
+            <a href="https://github.com/schmittzz" target="_blank" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/in/leonardonicola/" target="_blank" class="fa fa-linkedin"></a>
+        </div>
+
+    </main>
+
+    <!--WAVE BG-->
+    <div class="wave-container" data-aos="fade" data-aos-once="true" >
+        <svg xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 1440 320">
+        <path fill="#5296A5" fill-opacity="1" d="M0,32L26.7,42.7C53.3,53,107,75,160,106.7C213.3,139,267,181,320,170.7C373.3,160,427,96,480,64C533.3,32,587,32,640,37.3C693.3,43,747,53,800,90.7C853.3,128,907,192,960,229.3C1013.3,267,1067,277,1120,256C1173.3,235,1227,181,1280,181.3C1333.3,181,1387,235,1413,261.3L1440,288L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path>
+        <path fill="#82DDF0" fill-opacity="0.5" d="M0,160L40,176C80,192,160,224,240,202.7C320,181,400,107,480,101.3C560,96,640,160,720,170.7C800,181,880,139,960,106.7C1040,75,1120,53,1200,58.7C1280,64,1360,96,1400,112L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+    </div>
+    
+    <!--SRC JS-->
+    <script src="script.js">
+    </script>
+
+    <!--ON SCROLL VIEW ANIMATION-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js">
+    </script>
+
+</body>
+</html>
